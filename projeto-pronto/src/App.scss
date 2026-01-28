@@ -1,0 +1,120 @@
+/* VARIÁVEIS ECONVERSE */
+$primary-color: #F8475F;
+$secondary-color: #2A2A2A;
+$light-text: #7A7A7A;
+$background-color: #F9F9F9;
+$white: #FFFFFF;
+$border-color: #E6E6E6;
+
+/* RESET E BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background-color: $background-color;
+  color: $secondary-color;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* MAIN CONTENT */
+.main-content {
+  padding-top: 20px;
+}
+
+/* HERO SECTION */
+.hero-section {
+  text-align: center;
+  padding: 40px 0;
+  margin-bottom: 40px;
+
+  .hero-title {
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: $secondary-color;
+    margin-bottom: 16px;
+  }
+
+  .hero-subtitle {
+    font-size: 1.6rem;
+    color: $light-text;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+}
+
+/* PRODUCTS SECTION */
+.products-section {
+  padding-bottom: 60px;
+}
+
+/* GRID DE PRODUTOS */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 24px;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* LOADING E ERROR STATES */
+.loading-container {
+  text-align: center;
+  padding: 60px 0;
+  
+  .loading-spinner {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 3px solid $primary-color;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    color: $light-text;
+    font-size: 1.6rem;
+  }
+}
+
+.error-message {
+  background-color: #FFEBEE;
+  border: 1px solid #FFCDD2;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  margin: 20px 0;
+  
+  p {
+    color: #C62828;
+    font-size: 1.6rem;
+  }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

@@ -1,0 +1,62 @@
+.econverse-header {
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #E6E6E6;
+  padding: 16px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+  .header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    display: flex;
+    flex-direction: column;
+    
+    .logo-text {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: #F8475F;
+      letter-spacing: -0.5px;
+    }
+    
+    .logo-subtitle {
+      font-size: 1.2rem;
+      color: #7A7A7A;
+      font-weight: 400;
+      margin-top: 2px;
+    }
+  }
+
+  .header-nav {
+    display: flex;
+    gap: 24px;
+    
+    .nav-link {
+      color: #2A2A2A;
+      text-decoration: none;
+      font-size: 1.4rem;
+      font-weight: 500;
+      transition: color 0.2s ease;
+      
+      &:hover {
+        color: #F8475F;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .header-container {
+      flex-direction: column;
+      gap: 16px;
+    }
+    
+    .logo {
+      align-items: center;
+    }
+  }
+}
